@@ -1,14 +1,13 @@
 package rpc_inteface.demo.bean;
 
-import java.util.List;
 
 public class User {
     private String user_id;
     private String user_name;
     private String sex;
-    private List<String>address;
+    private String address;
 
-    public User(String user_id, String user_name, String sex, List<String> address) {
+    public User(String user_id, String user_name, String sex, String address) {
         this.user_id = user_id;
         this.user_name = user_name;
         this.sex = sex;
@@ -27,9 +26,6 @@ public class User {
         this.sex = sex;
     }
 
-    public void setAddress(List<String> address) {
-        this.address = address;
-    }
 
     public String getUser_id() {
         return user_id;
@@ -43,7 +39,11 @@ public class User {
         return sex;
     }
 
-    public List<String> getAddress() {
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getAddress() {
         return address;
     }
 }
