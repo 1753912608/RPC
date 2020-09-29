@@ -1,12 +1,14 @@
 package rpc_provider.demo;
 
-import org.springframework.stereotype.Service;
+import org.apache.dubbo.config.annotation.DubboService;
+import org.springframework.stereotype.Component;
 import rpc_inteface.demo.bean.User;
 import rpc_inteface.demo.service.UserService;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+@DubboService
+@Component
 public class UserServiceImpl implements UserService {
     @Override
     public User getUserInfo(String user_id) {
